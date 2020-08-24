@@ -1,4 +1,4 @@
-#region Copyright (c) 2007 Ryan Williams <drcforbin@gmail.com>
+﻿#region Copyright (c) 2007 Ryan Williams <drcforbin@gmail.com>
 
 /// <copyright>
 /// Copyright (c) 2007 Ryan Williams <drcforbin@gmail.com>
@@ -50,6 +50,8 @@ namespace Obfuscar
             Optimize = XmlConvert.ToBoolean(vars.GetValue("OptimizeMethods", "true"));
             SuppressIldasm = XmlConvert.ToBoolean(vars.GetValue("SuppressIldasm", "true"));
 
+            PortablePdb = XmlConvert.ToBoolean(vars.GetValue("PortablePdb", "false"));
+
             XmlMapping = XmlConvert.ToBoolean(vars.GetValue("XmlMapping", "false"));
             RegenerateDebugInfo = XmlConvert.ToBoolean(vars.GetValue("RegenerateDebugInfo", "false"));
         }
@@ -87,5 +89,7 @@ namespace Obfuscar
         public bool UseUnicodeNames { get; }
 
         public bool UseKoreanNames { get; }
+
+        public bool PortablePdb { get; }
     }
 }

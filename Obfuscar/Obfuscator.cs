@@ -210,7 +210,7 @@ namespace Obfuscar
                     var parameters = new WriterParameters();
                     if (Project.Settings.RegenerateDebugInfo)
                     {
-                        if (IsOnWindows)
+                        if (Project.Settings.PortablePdb)
                         {
                             parameters.SymbolWriterProvider = new Mono.Cecil.Cil.PortablePdbWriterProvider();
                         }
